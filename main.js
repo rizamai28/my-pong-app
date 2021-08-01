@@ -90,6 +90,13 @@
       document.addEventListener("mousemove", (e) => {
         this.mouseX = e.clientX;
       });
+
+      document.addEventListener("touchstart", (e) => {
+        this.mouseX = e.changedTouches[0].pageX;
+      });
+      document.addEventListener("touchmove", (e) => {
+        this.mouseX = e.changedTouches[0].pageX;
+      });
     }
 
     update(ball) {
