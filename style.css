@@ -1,3 +1,9 @@
+html {
+  /* ビヨヨン効果を無効化する */
+  overscroll-behavior: none;
+}
+
+
 /*まずはお決まりのボックスサイズ算出をborer-boxに */
 *,
 *:before,
