@@ -1,9 +1,3 @@
-html {
-  /* ビヨヨン効果を無効化する */
-  overscroll-behavior: none;
-}
-
-
 /*まずはお決まりのボックスサイズ算出をborer-boxに */
 *,
 *:before,
@@ -16,6 +10,9 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 62.5%; /*rem算出をしやすくするために*/
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 .btn,
