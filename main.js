@@ -88,13 +88,16 @@
 
     addHandler() {
       document.addEventListener("mousemove", (e) => {
+        e.preventDefault();
         this.mouseX = e.clientX;
       });
 
       document.addEventListener("touchstart", (e) => {
+        e.preventDefault();
         this.mouseX = e.changedTouches[0].pageX;
       });
       document.addEventListener("touchmove", (e) => {
+        e.preventDefault();
         this.mouseX = e.changedTouches[0].pageX;
       });
     }
@@ -261,7 +264,7 @@
     drawGameOver() {
       this.ctx.font = '28px "Arial Black"';
       this.ctx.fillStyle = "tomato";
-      this.ctx.fillText("GAME OVER", 100, 150);
+      this.ctx.fillText("GAME OVER", (this.canvas.width / 4) - 5, 150);
     }
 
     drawScore() {
